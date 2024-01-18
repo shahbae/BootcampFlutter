@@ -3,16 +3,16 @@ import 'dart:io';
 void main() {
   // //NO 1
   // // =================
-  // var word = 'dart';
-  // var second = 'is';
-  // var third = 'awesome';
-  // var fourth = 'and';
-  // var fifth = 'I';
-  // var sixth = 'love';
-  // var seventh = 'it!';
+  var word = 'dart';
+  var second = 'is';
+  var third = 'awesome';
+  var fourth = 'and';
+  var fifth = 'I';
+  var sixth = 'love';
+  var seventh = 'it!';
 
-  // var output = '$word $second $third $fourth $fifth $sixth $seventh';
-  // print(output);
+  var output = '$word $second $third $fourth $fifth $sixth $seventh';
+  print(output);
 
   // //NO 2
   // // =================

@@ -5,11 +5,11 @@ void main() {
 // NO 1
 // =======================
 
-  // stdout.write('Mau menginstall aplikasi? (Y/T): ');
-  // String jawab = stdin.readLineSync()!.toUpperCase();
-  // String pesan =
-  //     (jawab == 'Y') ? 'Anda akan menginstall aplikasi Dart' : 'Aborted';
-  // print(pesan);
+  stdout.write('Mau menginstall aplikasi? (Y/T): ');
+  String jawab = stdin.readLineSync()!.toUpperCase();
+  String pesan =
+      (jawab == 'Y') ? 'Anda akan menginstall aplikasi Dart' : 'Aborted';
+  print(pesan);
 
 // NO 2
 // =======================
