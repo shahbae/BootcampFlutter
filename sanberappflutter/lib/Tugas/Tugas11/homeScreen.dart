@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sanberappflutter/Tugas/Tugas11/accountScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/drawerScreen.dart';
+import 'package:sanberappflutter/Tugas/Tugas11/searchScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,7 +13,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
+  static const List<Widget> _widgetOptions = <Widget>[
+    ScreenHome(),
+    SearchScreen(),
+    AccountScreen(),
+  ];
+
   void _onItemTapped(int index) {
+    print("Item tapped: $index");
+
     setState(() {
       _selectedIndex = index;
     });
@@ -31,76 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       drawer: DrawerScreen(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Wellcome, ',
-                style: TextStyle(
-                  fontSize: 48.0,
-                  color: Color(0xFFFF5C00),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const Text(
-                'Shahbae ',
-                style: TextStyle(
-                  fontSize: 48.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 20.0),
-              const Text(
-                'Popular Company',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              SizedBox(
-                height: 160.0,
-                width: double.infinity,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return Jobs();
-                  },
-                ),
-              ),
-              const SizedBox(height: 20.0),
-              const Text(
-                'Recent Jobs',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              SizedBox(
-                height: 160.0,
-                width: double.infinity,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return Jobs();
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
+      // body: ScreenHome(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -119,6 +61,86 @@ class _HomeScreenState extends State<HomeScreen> {
         currentIndex: _selectedIndex,
         selectedItemColor: const Color(0xFFFF5C00),
         onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+
+class ScreenHome extends StatelessWidget {
+  const ScreenHome({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Wellcome, ',
+              style: TextStyle(
+                fontSize: 48.0,
+                color: Color(0xFFFF5C00),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const Text(
+              'Shahbae ',
+              style: TextStyle(
+                fontSize: 48.0,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 20.0),
+            const Text(
+              'Popular Company',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            SizedBox(
+              height: 160.0,
+              width: double.infinity,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return Jobs();
+                },
+              ),
+            ),
+            const SizedBox(height: 20.0),
+            const Text(
+              'Recent Jobs',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            SizedBox(
+              height: 160.0,
+              width: double.infinity,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return Jobs();
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

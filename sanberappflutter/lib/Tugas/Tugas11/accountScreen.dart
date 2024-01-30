@@ -5,9 +5,11 @@ class AccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      'Indeks 2: Account',
-      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+    return const Center(
+      child: Text(
+        'Indeks 2: Account',
+        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

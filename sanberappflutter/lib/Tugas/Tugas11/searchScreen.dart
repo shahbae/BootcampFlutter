@@ -5,9 +5,11 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      'Indeks 1: Search',
-      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+    return const Center(
+      child: Text(
+        'Indeks 1: Search',
+        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

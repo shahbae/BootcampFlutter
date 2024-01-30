@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sanberappflutter/Tugas/Tugas11/accountScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/homeScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/loginScreen.dart';
+import 'package:sanberappflutter/Tugas/Tugas11/searchScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => LoginScreen(),
         '/home': (context) => HomeScreen(),
+        '/search': (context) => SearchScreen(),
+        '/account': (context) => AccountScreen(),
       },
     );
   }
