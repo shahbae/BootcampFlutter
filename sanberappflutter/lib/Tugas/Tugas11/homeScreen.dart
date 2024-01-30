@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sanberappflutter/Tugas/Tugas10/DrawerScreen.dart';
+import 'package:sanberappflutter/Tugas/Tugas11/drawerScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFFF5C00),
-        title: Text(
+        title: const Text(
           "GolekKerjo",
           style: TextStyle(
             fontSize: 28.0,
@@ -37,23 +37,22 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Teks "Welcome"
               const Text(
-                'Welcome',
+                'Wellcome, ',
                 style: TextStyle(
-                  fontSize: 24.0,
+                  fontSize: 48.0,
+                  color: Color(0xFFFF5C00),
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
-              const SizedBox(height: 20.0),
-              const TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search jobs...',
-                  prefixIcon: Icon(Icons.search),
+              const Text(
+                'Shahbae ',
+                style: TextStyle(
+                  fontSize: 48.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-
               const SizedBox(height: 20.0),
               const Text(
                 'Popular Company',
