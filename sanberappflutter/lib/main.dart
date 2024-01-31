@@ -3,6 +3,7 @@ import 'package:sanberappflutter/Tugas/Tugas11/accountScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/homeScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/loginScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/searchScreen.dart';
+import 'package:sanberappflutter/Tugas/Tugas12/get_data_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,14 +18,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GolekKerjo',
-      home: LoginScreen(),
-      initialRoute: '/login',
-      routes: {
-        '/login': (context) => LoginScreen(),
-        '/home': (context) => HomeScreen(),
-        '/search': (context) => SearchScreen(),
-        '/account': (context) => AccountScreen(),
-      },
+      home: GetDataScreen(),
+      // initialRoute: '/login',
+      // routes: {
+      //   '/login': (context) => LoginScreen(),
+      //   '/home': (context) => HomeScreen(),
+      //   '/search': (context) => SearchScreen(),
+      //   '/account': (context) => AccountScreen(),
+      // },
     );
   }
 }
