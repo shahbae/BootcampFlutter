@@ -1,7 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:sanberappflutter/Latihan/Auth/homeScreen.dart';
+import 'package:sanberappflutter/Latihan/Latihan%201/Auth/homeScreen.dart';
 
 // ignore: camel_case_types
 class loginScreen extends StatefulWidget {

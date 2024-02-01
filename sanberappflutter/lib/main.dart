@@ -1,14 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:sanberappflutter/Latihan/Latihan%201/Auth/loginScreen.dart';
+import 'package:sanberappflutter/Latihan/Latihan%202/getDataScreen.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import 'package:sanberappflutter/Latihan/Auth/loginScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/accountScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/homeScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/loginScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/searchScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas12/get_data_screen.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,10 +25,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GolekKerjo',
-      home: loginScreen(),
+      home: GetDataScreenStateManagement(),
       // initialRoute: '/login',
       // routes: {
       //   '/login': (context) => LoginScreen(),
