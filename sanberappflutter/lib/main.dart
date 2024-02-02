@@ -1,13 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:sanberappflutter/Latihan/Latihan%201/Auth/loginScreen.dart';
 import 'package:sanberappflutter/Latihan/Latihan%202/getDataScreen.dart';
+import 'package:sanberappflutter/Latihan/Latihan2Route/pages/page_1.dart';
+import 'package:sanberappflutter/Latihan/Latihan2Route/routes/page_routes.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:sanberappflutter/Tugas/Tugas11/accountScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/homeScreen.dart';
-import 'package:sanberappflutter/Tugas/Tugas11/loginScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas11/searchScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas12/get_data_screen.dart';
 
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GolekKerjo',
-      home: GetDataScreenStateManagement(),
+      home: PageOne(),
+      getPages: PageRouteApp.pages,
       // initialRoute: '/login',
       // routes: {
       //   '/login': (context) => LoginScreen(),

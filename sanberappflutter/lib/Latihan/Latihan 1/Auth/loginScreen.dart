@@ -1,6 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
 import 'package:sanberappflutter/Latihan/Latihan%201/Auth/homeScreen.dart';
 
 // ignore: camel_case_types
@@ -34,12 +35,16 @@ class _loginScreenState extends State<loginScreen> {
           .signInWithEmailAndPassword(
               email: _emailCon.text, password: _passCon.text)
           .then(
-            (value) => Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => HomeScreen(),
-              ),
+            (value) => Get.to(
+              () => const HomeScreen(),
             ),
           );
+      //   Navigator.of(context).pushReplacement(
+      //     MaterialPageRoute(
+      //       builder: (context) => HomeScreen(),
+      //     ),
+      //   ),
+      // );
     } catch (e) {
       e;
     }
